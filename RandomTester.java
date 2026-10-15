@@ -65,6 +65,11 @@ public class RandomTester
 
     }
 
+    public int getUpToMax2(int max) {
+        return getInRange(1, max);
+
+    }
+
     public int getInRange(int min, int max) {
         int random = generator.nextInt(max-min+1);
 
