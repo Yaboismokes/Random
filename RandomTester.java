@@ -1,5 +1,7 @@
 import java.util.Random;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 /**
  * Write a description of class Random here.
  *
@@ -45,20 +47,28 @@ public class RandomTester
         return random+1;
 
     }
+
     public String getResponse() {
         ArrayList<String> response = new ArrayList<>();
         response.add("yes");
         response.add("no");
         response.add("maybe");
-        
-        
-        
+        int index = generator.nextInt(response.size());
+
+        return response.get(index);
+
     }
-    
-    
-    
-    
-    
-    
-    
+
+    public int getUpToMax(int max) {
+        int random = generator.nextInt(max);
+        return random+1;
+
+    }
+
+    public int getInRange(int min, int max) {
+        int random = generator.nextInt(max-min+1);
+
+        return random+min;
+    }
+
 }
